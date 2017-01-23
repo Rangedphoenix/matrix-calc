@@ -31,10 +31,12 @@ namespace MatrixCalcs
 
     class Storage
     {
+        //matrix 1
         static public List<double> m1row1;
         static public List<double> m1row2;
         static public List<double> m1row3;
-
+        
+        //matrix 2
         static public List<double> m2row1;
         static public List<double> m2row2;
         static public List<double> m2row3;
@@ -56,7 +58,13 @@ namespace MatrixCalcs
 
             return cof1 + cof2 + cof3;
         }
-
+        
+        /*Implementation of the principle that "The area of a triangle with verticies
+        (x1,y1) (x2, y2) (x3, y3) is half of the determinant of the following matrix:
+        x1  y1  1
+        x2  y2  1
+        x3  y3  1
+        */
         static public double getArea()
         {
             double value = .5 * getDet();
